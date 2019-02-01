@@ -152,7 +152,7 @@ export default class JestTestAdapter implements TestAdapter {
 
     const debugConfiguration: vscode.DebugConfiguration = {
       args,
-      console: "integratedTerminal",
+      // console: "integratedTerminal",
       cwd: "${workspaceFolder}",
       internalConsoleOptions: "neverOpen",
       name: "vscode-jest-test-adapter",
