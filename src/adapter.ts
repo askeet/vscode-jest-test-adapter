@@ -136,7 +136,11 @@ export default class JestTestAdapter implements TestAdapter {
   }
 
   public async debug(tests: string[]): Promise<void> {
-    const args = ["--runInBand"];
+    const args = [
+      "--runInBand",
+      "--coverage=false",
+      "--verbose=false",
+    ];
     const testFilter = mapTestIdsToTestFilter(tests);
     if (testFilter) {
       if (testFilter.testFileNamePattern) {
